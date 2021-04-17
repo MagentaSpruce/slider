@@ -1,0 +1,196 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/background.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-top: 3rem;
+}
+
+.navbar {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  background: rgba(29, 33, 61, 0.5);
+  padding: 0 6rem;
+}
+
+.logo {
+  width: 15.5rem;
+}
+
+.logo img {
+  width: 3rem;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+
+nav {
+  flex: 1;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 6rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.user img {
+  width: 3rem;
+  margin-left: 1.5rem;
+  cursor: pointer;
+}
+
+.sidebar {
+  width: 15.5rem;
+  height: 100vh;
+  background: rgba(29, 31, 58, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.search__icon {
+  width: 2rem;
+  display: block;
+  margin: 12rem auto 0;
+  cursor: pointer;
+}
+
+.social__links {
+  width: 2rem;
+  display: block;
+  margin: 22rem auto 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.social__links img {
+  width: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.info-icon {
+  width: 2rem;
+  position: absolute;
+  left: 50%;
+  bottom: 3rem;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.msg__container {
+  width: 60rem;
+  height: 28rem;
+  position: absolute;
+  left: 14%;
+  top: 57%;
+  transform: translateY(-50%);
+  overflow: hidden; /*prevents overflow of slider*/
+}
+
+#slider {
+  display: inline-flex; /*puts all four divs next to eachother over flowing page*/
+  transition: all 0.5s;
+}
+
+.msg__col {
+  width: 60rem;
+  height: 28rem;
+}
+
+.msg__col h1 {
+  color: #fff;
+  font-size: 8rem;
+  font-weight: 100;
+  margin: 1rem 0;
+}
+
+.msg__col p {
+  color: #ddd;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.msg__col a {
+  display: inline-block;
+  text-decoration: none;
+  color: #555;
+  background-color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem 3.5rem;
+  border-radius: 3rem;
+  margin-top: 2.5rem;
+}
+
+.controller {
+  width: 1px;
+  height: 32rem;
+  display: block;
+  background: #c0c0c0;
+  position: absolute;
+  top: 55%;
+  right: 5rem;
+  transform: translateY(-50%); /*adds white line*/
+}
+
+#line1,
+#line2,
+#line3,
+#line4 {
+  height: 8rem;
+  width: 1rem;
+  cursor: pointer;
+  transform: translateX(-50%);
+  /*background: red;/*shows all 4 lines together, without this only see the one white vertical line*/
+}
+
+#active {
+  /*this makes the bar for the white line so you have a slider*/
+  width: 0.5rem;
+  height: 8rem;
+  border-radius: 1rem;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  transition: all 0.5s;
+}
